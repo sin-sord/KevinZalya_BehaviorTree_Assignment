@@ -295,13 +295,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.3053958,"g":0.4716981,"b":0.2291741,"a":1.0},"_name":"Alert","_position":{"x":645.0,"y":266.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":516.0,"y":150.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"goblinSFX":"Alert","$type":"NodeCanvas.Tasks.Actions.PlaySoundAT"}]},"_color":{"r":0.3053958,"g":0.4716981,"b":0.2291741,"a":1.0},"_name":"Alert","_position":{"x":645.0,"y":267.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":516.0,"y":150.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 0, y: 0}
+    _translation: {x: -164, y: 1}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -865,24 +865,24 @@ MonoBehaviour:
   defaultMasterVolume: 0
   defaultEffectsVolume: 0
   sounds:
-  - name: 
+  - name: Alert
     clip: {fileID: 8300000, guid: db11c10333d3b2c4693ef5be71879a81, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     looping: 0
     source: {fileID: 0}
     type: 0
   - name: Idle
     clip: {fileID: 8300000, guid: fa99db417e8f2604f95311cd3d76a756, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     looping: 0
     source: {fileID: 0}
     type: 0
   - name: Swoosh
     clip: {fileID: 8300000, guid: 7f2c86103cefb1e4fbc048bd8a1d3c75, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     looping: 0
     source: {fileID: 0}
     type: 0
