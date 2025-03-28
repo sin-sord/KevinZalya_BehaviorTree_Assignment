@@ -1,10 +1,18 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using System.Transactions;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class ApproachAT : ActionTask {
+	public class ChangeTargetAT : ActionTask {
+
+		public BBParameter<Transform> currentTarget;
+		public Transform[] patrolPoints;
+
+		private int currentPatrolPointIndex = 0;
+
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
@@ -16,6 +24,17 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+
+			currentPatrolPointIndex++;
+
+			if (currentPatrolPointIndex >= patrolPoints.Length)
+			{
+				
+				currentPatrolPointIndex = 0;
+			}
+
+			currentTarget.value = patrolPoints[currentPatrolPointIndex];
+			
 			EndAction(true);
 		}
 
